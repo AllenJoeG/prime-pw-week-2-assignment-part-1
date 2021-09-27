@@ -45,9 +45,13 @@ if (luckyNumber == 2 && adventurous == true){
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
-
-
-
+if (pets < allowedPets){
+  console.log('I can have more pets!');
+} else if(pets == allowedPets){
+  console.log('I have enough pets');
+} else if(pets > allowedPets){
+  console.log('Oh no, I have too many pets!');
+}
 // STRETCH GOALS:
 
 // 16 - Make a variable called `mostPets` and a conditional that
@@ -55,7 +59,35 @@ if (luckyNumber == 2 && adventurous == true){
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
+let mostPets = 0;
+if (pets > friendsPets){
+  mostPets = pets;
+} else if (pets == friendsPets) {
+  mostPets = pets;
+} else if (pets < friendsPets) {
+  mostPets = friendsPets;
+}
+console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+//To avoid conflict with #16, I will declare mostPets2
+mostPets2 = 0;
+switch (pets) {
+  case pets > friendsPets:
+    mostPets2 = pets;
+    break;
+  case pets < friendsPets:
+    mostPets2 = friendsPets;
+    break;
+  default:
+    mostPets2 = pets
+    break;
+}
+console.log(mostPets2);
+
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+function getVenture(parameterX) {
+  return (parameterX ? "Adventures are Great!" : "How about we stay home?");
+}
+console.log(getVenture(adventurous));
