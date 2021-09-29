@@ -30,10 +30,9 @@ const allowedPets = 6;
 // if it's not true, console log "How about we stay home?"
 if (adventurous == true){
   console.log('Adventures are great!');
-} else {
+  } else {
     console.log('How about we stay home?');
-  }
-
+}
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
 if (luckyNumber == 2 && adventurous == true){
@@ -84,7 +83,6 @@ switch (pets) {
     break;
 }
 console.log(mostPets2);
-
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 function getVenture(parameterX) {
